@@ -101,6 +101,7 @@ class CollectDTypes(object):
             types_dbs = filter(os.path.exists, [
                 "/usr/share/collectd/types.db",
                 "/usr/local/share/collectd/types.db",
+                "./tests/data/types.db",
             ])
             if not types_dbs:
                 raise ConfigError("Unable to locate types.db")
